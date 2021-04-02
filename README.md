@@ -15,7 +15,8 @@ On - going problems:
 
 
 ## What we do is not to directly input various-size image. By adding 0 to small size image, which make them as the same as max-size image. 0 (zero) will be ignored as backgroup in the model. 
-Why still use FCN? Becuase images we use is not equal width and height (they are same size,but ratio of width and height is not 1), and CNN doesn't work well on such images. Also, by resizeing images to have equal width and height, it will have to sacrifice a lots of imformation
+Why still use FCN? Becuase images we use is not equal width and height (they are same size,but ratio of width and height is not 1), and CNN doesn't work well on such images. Also, by resizeing images to have equal width and height, it will have to sacrifice a lots of imformation.
+This way we have a batch with equal image dimensions but every batch has a different shape (due to difference in max height and width of images across batches)
  
 
 ### Model file has two models
